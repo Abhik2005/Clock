@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.main{
+width: 100%;
+height: 100%;
+background-color: #9e9b9b;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.clock{
+    width:  800px;
+    height: 800px;
+    background-color: #111;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 100px;
+    list-style: none;
+    position: relative;
+}
+li:nth-child(12){
+position: absolute;
+top: 0%;
+left: 50%;
+transform: translateX(-50%);
+}
+li:nth-child(6){
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+li:nth-child(3){
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+}
+li:nth-child(9){
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+}
+li:nth-child(1){
+    position: absolute;
+    top: 4%;
+    left: 70%;
+}
+li:nth-child(2){
+    position: absolute;
+    top: 20%;
+    left: 85%;
+}
+li:nth-child(4){
+    position: absolute;
+    bottom: 20%;
+    left: 85%;
+}
+li:nth-child(5){
+    position: absolute;
+    bottom: 4%;
+    left: 70%;
+}
+li:nth-child(7){
+    position: absolute;
+    bottom: 4%;
+    right: 70%;
+}
+li:nth-child(8){
+    position: absolute;
+    bottom: 20%;
+    right: 85%;
+}
+li:nth-child(10){
+    position: absolute;
+    top: 20%;
+    right: 80%;
+}
+li:nth-child(11){
+    position: absolute;
+    top: 4%;
+    right: 65%;
+}
+.second-stick{
+    width: 2px;
+    height: 285px;
+    background-color: red;
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transform-origin: 50% 100%;
+}
+.minute-stick{
+    width: 10px;
+    height: 295px;
+    background-color: rgb(133, 130, 130);
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 50% 100%;
+}
+.hour-stick{
+    width: 20px;
+    height: 220px;
+    background-color: rgb(100, 81, 186);
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(330deg);
+    transform-origin: 50% 100%;
+}
+.dot{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media only screen and ( max-width: 800px ) {
+    .clock{
+        width: 300px;
+        height: 300px;
+        font-size: 30px;
+    }
+    .dot{
+        width: 20px;
+        height: 20px;
+    }
+    .second-stick{
+        top: 30%;
+        left: 51%;
+        width: 2px;
+        height: 120px;
+    }
+    .minute-stick{
+        width: 5px;
+        height: 110px;
+        top: 33%;
+    }
+    .hour-stick{
+        top: 36%;
+        left: 49%;
+        width: 7px;
+        height: 80px;
+    }
+}
